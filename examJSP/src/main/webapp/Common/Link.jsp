@@ -11,7 +11,7 @@
 			<a href="../06Session/Logout.jsp">로그아웃</a>
 		<% } %>	 
 		
-			<a href="">게시판(페이징X)</a> 
+			<a href="../08Board/List.jsp">게시판(페이징X)</a> 
 			<a href="">게시판(페이징O)</a>
 		</nav>
 	</div>
