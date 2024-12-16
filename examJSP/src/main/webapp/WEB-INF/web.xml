@@ -33,4 +33,49 @@
   <session-config>
   	<session-timeout>20</session-timeout>
   </session-config>
+  <!-- 한페이지당 게시물 갯수 설정 : 10개 -->
+  <context-param>
+  	<param-name>POSTS_PER_PAGE</param-name>
+  	<param-value>10</param-value>
+  </context-param>
+  <!-- 페이징이 5개씩 보이게 설정 -->
+  <context-param>
+  	<param-name>PAGES_PER_BLOCK</param-name>
+  	<param-value>5</param-value>
+  </context-param>
+  
+  <!-- 서블릿 매핑 1(예제 12-2) -->
+  <!-- HelloServlet 의 클래스는 servlet.HelloServlet이고 URL은 /12Servlet/HelloServlet.do  로 HelloServlet이름으로 URL이 매핑되었다.-->
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/12Servlet/HelloServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 서블릿 매핑 2(예제 12-7) -->
+  <servlet>
+    <servlet-name>DirectServletPrint</servlet-name>
+    <servlet-class>servlet.DirectServletPrint</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DirectServletPrint</servlet-name>
+    <url-pattern>/12Servlet/DirectServletPrint.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 서블릿 매핑 3(예제 12-14) -->
+  <servlet>
+    <servlet-name>MemberAuth</servlet-name>
+    <servlet-class>servlet.MemberAuth</servlet-class>
+    <init-param>
+      <param-name>admin_id</param-name>
+      <param-value>nakja</param-value>
+    </init-param>
+  </servlet>  
+  <servlet-mapping>
+    <servlet-name>MemberAuth</servlet-name>
+    <url-pattern>/12Servlet/MemberAuth.mvc</url-pattern>
+  </servlet-mapping>
 </web-app>

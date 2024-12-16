@@ -18,7 +18,15 @@
 	
 	// DAO객체를 통해 DB에 DTO 저장
 	BoardDAO dao = new BoardDAO(application);
-	int iResult = dao.insertWrite(dto);
+	int iResult = dao.insertWrite(dto); // 1행추가
+	// int iResult = 0;
+	/*  // 더미 데이터 100개 생성 
+		for(int i=1; i<=100; i++){
+		dto.setTitle(title+ " - " + i);
+		dto.setContent(content+ " - " + i);
+		iResult = dao.insertWrite(dto);
+		} 
+	*/
 	dao.close();
 	
 	// 성공 or 실패

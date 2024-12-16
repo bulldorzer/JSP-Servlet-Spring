@@ -141,8 +141,8 @@ public class BoardDAO extends JDBConnect{
 			String query = "INSERT INTO board ( "
 							+" num,title,content,id,visitcount) "
 							+" VALUES ( "
-							+" seq_board_num.NEXTVAL, ?, ?, ?, 0)";
-			System.out.println(query);
+							+" seq_board_num.NEXTVAL, ?, ?, ?, 0)"; //seq_board_num.NEXTVAL => 시퀀스 일련번호 다음꺼 생성
+//			System.out.println(query);
 			psmt = con.prepareStatement(query);
 			psmt.setString(1, dto.getTitle());
 			psmt.setString(2, dto.getContent());
@@ -215,10 +215,10 @@ public class BoardDAO extends JDBConnect{
 			psmt.setString(1, dto.getTitle()); // 인파라미터를 일련번호로 설정
 			psmt.setString(2, dto.getContent()); // 인파라미터를 일련번호로 설정
 			psmt.setString(3, dto.getNum()); // 인파라미터를 일련번호로 설정
-			System.out.println("query"+query);
-			System.out.println("dto.getTitle()"+dto.getTitle());
-			System.out.println("dto.getContent()"+dto.getContent());
-			System.out.println("dto.getNum()"+dto.getNum());
+//			System.out.println("query"+query);
+//			System.out.println("dto.getTitle()"+dto.getTitle());
+//			System.out.println("dto.getContent()"+dto.getContent());
+//			System.out.println("dto.getNum()"+dto.getNum());
 			result = psmt.executeUpdate(); // 쿼리 실행
 		} catch (Exception e) {
 			System.out.println("게시물 조회수 수정 중 예외 발생");

@@ -1,11 +1,16 @@
 package membership;
 
 import common.JDBConnect;
+import jakarta.servlet.ServletContext;
 
 public class MemberDAO extends JDBConnect{
 	// DB연결
 	public MemberDAO(String drv, String url, String id, String pw) {
 		super(drv,url,id,pw);
+	}
+	// DB연결 case2
+	public MemberDAO(ServletContext application) {
+		super(application);
 	}
 	
 	// 명시한 아이디.패스워드와 일치하는 회원 정보를 반환합니다.
