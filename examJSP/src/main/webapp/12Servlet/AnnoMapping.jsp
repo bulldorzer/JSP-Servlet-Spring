@@ -11,6 +11,7 @@
     <p>
         <strong>${ message }</strong>
         <br />        
+        request.getContextPath() => <%=request.getContextPath() %> <br />
         <a href="<%= request.getContextPath() %>/12Servlet/AnnoMapping.do">바로가기</a>
     </p>
 </body>
